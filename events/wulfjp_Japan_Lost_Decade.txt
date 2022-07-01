@@ -1,0 +1,143 @@
+add_namespace = wulfjp_japan
+add_namespace = wulfjp_japan_news
+
+# KEY TO EVENT PREFIXES
+# 1000  GENERAL JAPAN EVENTS 
+# 2000  POLITICAL EVENTS 
+# 3000  NON-LOST DECADE ECONOMIC EVENTS
+# 4000  JSDF EVENTS
+# 5000  FACTION EVENTS 
+# 6000  RESERVED
+# 7000  RESERVED
+# 8000  LOST DECADE EVENTS
+# 9000  3.11 EVENTS
+
+
+#----------------------------------------------------------------
+#Lost Decade Events
+#----------------------------------------------------------------
+
+# Intro event, explanation of the lost decade
+country_event = {
+	id = wulfjp_japan.8000
+	title = wulfjp_japan.8000.t
+	desc = wulfjp_japan.8000.d
+	
+    # Fired by first focus of lost decade tree
+	is_triggered_only = yes
+
+	
+	option = {
+		name = wulfjp_japan.8000.oA
+	}
+}
+
+# Monetary Easing Explanation
+country_event = {
+	id = wulfjp_japan.8100
+	title = wulfjp_japan.8100.t
+	desc = wulfjp_japan.8100.d
+	
+	# Fired by "explain monetary easing" decision
+	is_triggered_only = yes
+
+	option = {
+		name = wulfjp_japan.8100.oA
+	}
+}
+
+# Monetary Easing Initial Choice
+country_event = {
+	id = wulfjp_japan.8110
+	title = wulfjp_japan.8110.t
+	desc = wulfjp_japan.8110.d
+
+	is_triggered_only = yes
+
+	# Cautious Easing
+	option = {
+		name = wulfjp_japan.8110.oA
+	}
+	# Aggressive Easing
+	option = {
+		name = wulfjp_japan.8110.oB
+	}
+}
+
+# Monetary Easing Follow Up Endless
+country_event = {
+	id = wulfjp_japan.8120
+	title = wulfjp_japan.8120.t
+	desc = wulfjp_japan.8120.d
+	
+	# Every year, allow the user to change their monetary easing commitment
+	is_triggered_only = yes
+
+	# Roll back some changes
+	option = {
+		name = wulfjp_japan.8120.oA
+	}
+	# Continue same policy
+	option = {
+		name = wulfjp_japan.8120.oB
+	}
+	# Expand the easing
+	option = {
+		name = wulfjp_japan.8120.oC
+	}
+}
+
+# Negative Interest Rate Policy Explanation
+country_event = {
+	id = wulfjp_japan.8200
+	title = wulfjp_japan.8200.t
+	desc = wulfjp_japan.8200.d
+	
+	# Fired by "explain nirp" decision
+	is_triggered_only = yes
+
+	option = {
+		name = wulfjp_japan.8200.oA
+	}
+}
+
+# NIRP Initial Choice
+country_event = {
+	id = wulfjp_japan.8210
+	title = wulfjp_japan.8210.t
+	desc = wulfjp_japan.8210.d
+
+	is_triggered_only = yes
+
+	# Limited initial NIRP
+	option = {
+		name = wulfjp_japan.8210.oA
+	}
+	# Aggressive initial NIRP
+	option = {
+		name = wulfjp_japan.8210.oB
+	}
+}
+
+# NIRP Endless
+country_event = {
+	id = wulfjp_japan.8120
+	title = wulfjp_japan.8120.t
+	desc = wulfjp_japan.8120.d
+	
+	# Every year, allow the user to change their NIRP commitment
+	is_triggered_only = yes
+
+	# Normalize the interest rate
+	option = {
+		name = wulfjp_japan.8120.oA
+	}
+	# Maintain the interest rate
+	option = {
+		name = wulfjp_japan.8120.oB
+	}
+	# Lower the interest rate further!
+	option = {
+		name = wulfjp_japan.8120.oC
+	}
+}

@@ -1,0 +1,39 @@
+add_namespace = wulfjp_japan
+add_namespace = wulfjp_japan_news
+
+# KEY TO EVENT PREFIXES
+# 1000  GENERAL JAPAN EVENTS 
+# 2000  POLITICAL EVENTS 
+# 3000  NON-LOST DECADE ECONOMIC EVENTS
+# 4000  JSDF EVENTS
+# 5000  FACTION EVENTS 
+# 6000  RESERVED
+# 7000  RESERVED
+# 8000  LOST DECADE EVENTS
+# 9000  3.11 EVENTS
+
+
+#----------------------------------------------------------------
+#General Events
+#----------------------------------------------------------------
+
+# Intro event, explanation of the new tree
+country_event = {
+	id = wulfjp_japan.1000
+	title = wulfjp_japan.1000.t
+	desc = wulfjp_japan.1000.d
+	
+    # Change this to fire on startup
+	fire_only_once = yes
+	trigger = {
+		original_tag = JAP
+	}
+
+    mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = wulfjp_japan.1000.oA
+	}
+}

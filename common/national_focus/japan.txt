@@ -1,0 +1,452 @@
+﻿focus_tree = {
+	id = japan_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 20
+			original_tag = JAP
+		}
+	}
+	# Continuous_focus_position
+	continuous_focus_position = { x = -100 y = 1000 }
+
+	focus = {
+		id = JAP_lost_decade_parent
+		icon = test
+
+		x = 2
+		y = 0
+
+		cost = 1
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus JAP_lost_decade_parent"
+			add_political_power = 100
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = JAP_lost_decade_recovery_gentle
+		icon = test
+
+		x = -2
+		y = 1
+		relative_position_id = JAP_lost_decade_parent
+
+		cost = 5
+
+		prerequisite = { focus = JAP_lost_decade_parent }
+		mutually_exclusive = {
+			focus = JAP_lost_decade_recovery_harsh
+		}
+		mutually_exclusive = {
+			focus = JAP_lost_decade_recovery_sellout
+		}
+		available = { }
+		historical_ai = { }
+		select_effect = { }
+		bypass = { }
+		cancel = { }
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_EXPENDITURE FOCUS_FILTER_INDUSTRY}
+
+		complete_tooltip = { }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus JAP_lost_decade_recovery_gentle"
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = JAP_lost_decade_recovery_harsh
+		icon = test
+
+		x = 0
+		y = 1
+		relative_position_id = JAP_lost_decade_parent
+
+		cost = 5
+
+		prerequisite = { focus = JAP_lost_decade_parent }
+		mutually_exclusive = {
+			focus = JAP_lost_decade_recovery_gentle
+		}
+		mutually_exclusive = {
+			focus = JAP_lost_decade_recovery_sellout
+		}
+		available = { }
+		historical_ai = { }
+		select_effect = { }
+		bypass = { }
+		cancel = { }
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_EXPENDITURE FOCUS_FILTER_INDUSTRY}
+
+		complete_tooltip = { }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus JAP_lost_decade_recovery_harsh"
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = JAP_lost_decade_recovery_sellout
+		icon = test
+
+		x = 2
+		y = 1
+		relative_position_id = JAP_lost_decade_parent
+
+		cost = 5
+
+		prerequisite = { focus = JAP_lost_decade_parent }
+		mutually_exclusive = {
+			focus = JAP_lost_decade_recovery_gentle
+		}
+		mutually_exclusive = {
+			focus = JAP_lost_decade_recovery_harsh
+		}
+		available = { }
+		historical_ai = { }
+		select_effect = { }
+		bypass = { }
+		cancel = { }
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_EXPENDITURE FOCUS_FILTER_INDUSTRY}
+
+		complete_tooltip = { }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus JAP_lost_decade_recovery_sellout"
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+
+	focus = {
+		id = JAP_faction_parent
+		icon = test
+
+		x = 9
+		y = 0
+
+		cost = 5
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus JAP_faction_parent"
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = JAP_faction_progressive
+		icon = test
+
+		x = -3
+		y = 1
+		relative_position_id = JAP_faction_parent
+
+		cost = 15
+
+		prerequisite = { focus = JAP_faction_parent }
+		mutually_exclusive = { }
+		available = { }
+		historical_ai = { }
+		select_effect = { }
+		bypass = { }
+		cancel = { }
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_EXPENDITURE FOCUS_FILTER_INDUSTRY}
+
+		complete_tooltip = { }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus JAP_faction_progressive"
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = JAP_faction_status_quo
+		icon = test
+
+		x = -1
+		y = 1
+		relative_position_id = JAP_faction_parent
+
+		cost = 15
+
+		prerequisite = { focus = JAP_faction_parent }
+		mutually_exclusive = { }
+		available = { }
+		historical_ai = { }
+		select_effect = { }
+		bypass = { }
+		cancel = { }
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_EXPENDITURE FOCUS_FILTER_INDUSTRY}
+
+		complete_tooltip = { }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus JAP_faction_status_quo"
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = JAP_faction_populist
+		icon = test
+
+		x = 1
+		y = 1
+		relative_position_id = JAP_faction_parent
+
+		cost = 15
+
+		prerequisite = { focus = JAP_faction_parent }
+		mutually_exclusive = { }
+		available = { }
+		historical_ai = { }
+		select_effect = { }
+		bypass = { }
+		cancel = { }
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_EXPENDITURE FOCUS_FILTER_INDUSTRY}
+
+		complete_tooltip = { }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus JAP_faction_populist"
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = JAP_faction_revanchist
+		icon = test
+
+		x = 3
+		y = 1
+		relative_position_id = JAP_faction_parent
+
+		cost = 15
+
+		prerequisite = { focus = JAP_faction_parent }
+		mutually_exclusive = { }
+		available = { }
+		historical_ai = { }
+		select_effect = { }
+		bypass = { }
+		cancel = { }
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_EXPENDITURE FOCUS_FILTER_INDUSTRY}
+
+		complete_tooltip = { }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus JAP_faction_revanchist"
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+
+	focus = {
+		id = JAP_politics_early_parent
+		icon = test
+
+		x = 16
+		y = 0
+
+		cost = 5
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus JAP_politics_early_parent"
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	focus = {
+		id = JAP_politics_early_reformist
+		icon = test
+
+		x = -2
+		y = 1
+		relative_position_id = JAP_politics_early_parent
+
+		cost = 15
+
+		prerequisite = { focus = JAP_politics_early_parent }
+		mutually_exclusive = {
+			focus = JAP_politics_early_liberal
+		}
+		mutually_exclusive = {
+			focus = JAP_politics_early_conservative
+		}
+		available = { }
+		historical_ai = { }
+		select_effect = { }
+		bypass = { }
+		cancel = { }
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_EXPENDITURE FOCUS_FILTER_INDUSTRY}
+
+		complete_tooltip = { }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus JAP_politics_early_reformist"
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = JAP_politics_early_liberal
+		icon = test
+
+		x = 0
+		y = 1
+		relative_position_id = JAP_politics_early_parent
+
+		cost = 15
+
+		prerequisite = { focus = JAP_politics_early_parent }
+		mutually_exclusive = {
+			focus = JAP_politics_early_reformist
+		}
+		mutually_exclusive = {
+			focus = JAP_politics_early_conservative
+		}
+		available = { }
+		historical_ai = { }
+		select_effect = { }
+		bypass = { }
+		cancel = { }
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_EXPENDITURE FOCUS_FILTER_INDUSTRY}
+
+		complete_tooltip = { }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus JAP_politics_early_liberal"
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = JAP_politics_early_conservative
+		icon = test
+
+		x = 2
+		y = 1
+		relative_position_id = JAP_politics_early_parent
+
+		cost = 15
+
+		prerequisite = { focus = JAP_politics_early_parent }
+		mutually_exclusive = {
+			focus = JAP_politics_early_liberal
+		}
+		mutually_exclusive = {
+			focus = JAP_politics_early_reformist
+		}
+		available = { }
+		historical_ai = { }
+		select_effect = { }
+		bypass = { }
+		cancel = { }
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = no
+
+		search_filters = {FOCUS_FILTER_EXPENDITURE FOCUS_FILTER_INDUSTRY}
+
+		complete_tooltip = { }
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus JAP_politics_early_conservative"
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}
